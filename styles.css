@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  --Cyan: hsl(178, 100%, 50%);
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  font-family: "Outfit", sans-serif;
+}
+p {
+  font-size: 18px;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Very-dark-blue-main-bg);
+  padding: 3.4375rem 1.5rem;
+  min-height: 100vh;
+  color: var(--Soft-blue);
+  font: 300 1.125rem/1.6 Outfit, sans-serif;
+}
+footer {
+  color: hsl(0, 0%, 100%);
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
+h1 {
+  color: var(--White);
+  font-size: 1.5rem;
+  padding: 10px 10px;
+}
+.card {
+  max-width: 22rem;
+  border-radius: 16px;
+  padding: 15px;
+  background-color: var(--Very-dark-blue-card-bg);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+.card__banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  line-height: 1.6;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.card-image {
+  display: block;
+  position: relative;
+  border-radius: 0.5em;
+  overflow: hidden;
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.description {
+  color: var(--Soft-blue);
+  padding: 10px 10px;
+  font-weight: 100;
+}
+.header:focus,
+.header:focus-visible {
+  outline: 0.1875rem dotted var(--Cyan);
+  outline-offset: 0.3125rem;
+}
+
+.header:active,
+.header:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.card__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid var(--Very-dark-blue-line);
+  padding: 12px 0;
+}
+.card__price {
+  font-weight: 400;
+  color: var(--Cyan);
+}
+.card__time {
+  font-weight: 400;
+}
+.avatar {
+  margin-right: 1em;
+  border: 0.0625rem solid var(--White);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+.creator-text {
+  display: flex;
+}
+.creator-info {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.creator-name {
+  color: var(--White);
+}
+.creator-name:focus,
+.creator-name:focus-visible {
+  outline: 0.1875rem dotted #00fff7;
+  outline-offset: 0.3125rem;
+}
+
+.creator-name:active,
+.creator-name:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+.card-image:focus,
+.card-image:focus-visible {
+  outline: 0.1875rem dotted #00fff7;
+  outline-offset: 0.3125rem;
+}
+
+.card-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.3s ease-out;
+}
+
+.card-image:active::after,
+.card-image:hover::after {
+  background: rgba(0, 255, 247, 0.6)
+    url(https://nftcardfrontendmentor.netlify.app/icons/view.svg) center/3rem
+    no-repeat;
+}
